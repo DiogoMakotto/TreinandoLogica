@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trinando a lógica</title>
+</head>
+<body>
+    <!--Versão 1 -->
+<script>
+
+    function pulaLinha () {
+        document.write("<br>");
+        document.write("<br>");
+    }
+
+    function mostrar(frase) {
+        document.write(frase);
+        pulaLinha();
+    }
+
+var geradorDeNumeroAleatorio = Math.round(Math.random() * 10);
+
+//Math.round transforma o número gerado em inteiro, Math.random retorna um número aleatório de 1 a 10
+
+var tentativas = 1; 
+//valor inicial de tentativas 
+
+while(tentativas <= 3) {
+
+    var inputNumero = parseInt(prompt("Tente advinhar um número de 1 a 10, digite seu chute:"));
+    //parseInt tem a mesma função do Math.round, prompt cria uma caixa de entrada de valor similar ao comando alert();
+
+    if(inputNumero == geradorDeNumeroAleatorio) {
+
+        mostrar("Você ACERTOU, o número era " + geradorDeNumeroAleatorio);
+        break;
+    } else {
+
+        mostrar("Você ERROU! Você gastou todas as suas: " + tentativas + " tentativas.");
+    }
+    tentativas++;
+}
+
+</script>
+
+</body>
+</html>
