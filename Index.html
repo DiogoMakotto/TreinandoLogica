@@ -10,16 +10,6 @@
     <!--Versão 1 -->
 <script>
 
-    function pulaLinha () {
-        document.write("<br>");
-        document.write("<br>");
-    }
-
-    function mostrar(frase) {
-        document.write(frase);
-        pulaLinha();
-    }
-
 var geradorDeNumeroAleatorio = Math.round(Math.random() * 10);
 
 //Math.round transforma o número gerado em inteiro, Math.random retorna um número aleatório de 1 a 10
@@ -34,11 +24,11 @@ while(tentativas <= 3) {
 
     if(inputNumero == geradorDeNumeroAleatorio) {
 
-        mostrar("Você ACERTOU, o número era " + geradorDeNumeroAleatorio);
+        document.write("Você ACERTOU, o número era " + geradorDeNumeroAleatorio);
         break;
     } else {
 
-        mostrar("Você ERROU! Você gastou todas as suas: " + tentativas + " tentativas.");
+        document.write("Você ERROU! Você gastou todas as suas: " + tentativas + " tentativas.");
     }
     tentativas++;
     //lopping com while para que rode até que o número de tentativas seja <= as chances do user
