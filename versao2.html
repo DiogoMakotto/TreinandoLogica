@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="PT-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Versão 2 - Advinhação </title>
+</head>
+<body>
+    
+<input/>
+<button>Verificar se acertou o número secreto</button>
+
+<script>
+
+    var numeroSecreto = Math.round(Math.random() * 10);
+
+    var input = document.querySelector("input");
+    //document.querySelector serve para ancorar o unput do html para dentro da sessão de JavaScript 
+    input.focus();
+    //ao iniciar a pagina já foca na caixa de input
+
+    function verificaPreenchimento(){
+        
+        if(input.value == numeroSecreto) {
+            alert("Você ACERTOU!!!");
+        } else{
+            alert("Você ERROU!!!");
+        }
+
+        input.value = "";
+        //reseta o valor da caixa de input 
+        input.focus();
+        //foca o valor da caixa de input para preencher novamente 
+    }
+    //essa função verificará o preenchimento do valor do secredo e vai comparar com o número secreto
+
+    var button = document.querySelector("button");
+    button.onclick = verificaPreenchimento;
+    //document.querySelector ancora o botão do html e o button.onclick executa a função ao clicar
+
+</script>
+
+</body>
+</html>
