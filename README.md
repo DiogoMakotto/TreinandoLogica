@@ -1,6 +1,6 @@
 # Exercitando lógica de programação
 
-Criando jogo de advinhação númerica de 1 a 10 com interface.
+Criando jogo de adivinhação numérica de 1 a 10 com interface.
   
   * Comunicação com o usuário;
   * Programa dinâmico com variáveis
